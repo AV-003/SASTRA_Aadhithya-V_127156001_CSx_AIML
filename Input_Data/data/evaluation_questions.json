@@ -1,0 +1,34 @@
+[
+  {
+    "question": "Which component controls the exterior lamp decision?",
+    "expected_pages": [1],
+    "expected_terms": ["Light Control"]
+  },
+  {
+    "question": "What signal reports the lamp status?",
+    "expected_pages": [2],
+    "expected_terms": ["LampStatus"]
+  },
+  {
+    "question": "Which input signal is received through R_HeadlampSwitch?",
+    "expected_pages": [2],
+    "expected_terms": ["HeadlampSwitchRequest"]
+  },
+  {
+    "question": "What does Light Control depend on?",
+    "expected_pages": [3],
+    "expected_terms": ["HeadlampSwitchRequest"]
+  },
+  {
+    "question": "What happens when the headlamp request is ON and no fault is present?",
+    "expected_pages": [3],
+    "expected_terms": ["LOW_BEAM_ON"]
+  },
+  {
+    "question": "What is the brake pressure calibration threshold?",
+    "expected_pages": [],
+    "expected_terms": [],
+    "insufficient_evidence": true
+  }
+]
+

@@ -1,0 +1,132 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R 5 0 R 7 0 R] /Count 3 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R >> >> /Contents 9 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R >> >> /Contents 10 0 R >>
+endobj
+6 0 obj
+<< /Length 0 >>
+stream
+
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R >> >> /Contents 11 0 R >>
+endobj
+8 0 obj
+<< /Length 0 >>
+stream
+
+endstream
+endobj
+9 0 obj
+<< /Length 1352 >>
+stream
+BT
+/F1 10 Tf
+14 TL
+1 0 0 1 72 760 Tm (Synthetic AUTOSAR-Style HLD Demonstration Document) Tj
+1 0 0 1 72 746 Tm (Document: Vehicle Lighting Controller HLD) Tj
+1 0 0 1 72 732 Tm (Notice: This document is synthetic demonstration data only.) Tj
+1 0 0 1 72 718 Tm () Tj
+1 0 0 1 72 704 Tm (Page 1. System Overview) Tj
+1 0 0 1 72 690 Tm (The Vehicle Lighting Controller is a fictional high-level design for a simple) Tj
+1 0 0 1 72 676 Tm (exterior lighting feature. The Light Control application component receives) Tj
+1 0 0 1 72 662 Tm (driver lighting requests and decides whether the headlamp command should be ON) Tj
+1 0 0 1 72 648 Tm (or OFF. The component that controls the exterior lamp decision is Light Control.) Tj
+1 0 0 1 72 634 Tm (The Vehicle Signal Interface component adapts vehicle network values) Tj
+1 0 0 1 72 620 Tm (into application-level signals for the Light Control component.) Tj
+1 0 0 1 72 606 Tm () Tj
+1 0 0 1 72 592 Tm (Identified components:) Tj
+1 0 0 1 72 578 Tm (- Light Control application component) Tj
+1 0 0 1 72 564 Tm (- Vehicle Signal Interface component) Tj
+1 0 0 1 72 550 Tm (- Lamp Driver Interface component) Tj
+1 0 0 1 72 536 Tm () Tj
+1 0 0 1 72 522 Tm (The design goal is to show traceable document question answering with source) Tj
+1 0 0 1 72 508 Tm (pages, not to define a certified automotive architecture.) Tj
+ET
+endstream
+endobj
+10 0 obj
+<< /Length 1131 >>
+stream
+BT
+/F1 10 Tf
+14 TL
+1 0 0 1 72 760 Tm (Page 2. Interfaces, Ports, and Signals) Tj
+1 0 0 1 72 746 Tm (The Light Control application component has a required port named) Tj
+1 0 0 1 72 732 Tm (R_HeadlampSwitch. This port receives the input signal HeadlampSwitchRequest from) Tj
+1 0 0 1 72 718 Tm (the Vehicle Signal Interface component.) Tj
+1 0 0 1 72 704 Tm () Tj
+1 0 0 1 72 690 Tm (The Light Control application component has a provided port named P_LampStatus.) Tj
+1 0 0 1 72 676 Tm (This port publishes the output signal LampStatus for diagnostic display and) Tj
+1 0 0 1 72 662 Tm (operator feedback. LampStatus can report OFF, LOW_BEAM_ON, or FAULT_DETECTED in) Tj
+1 0 0 1 72 648 Tm (this synthetic example. The signal that reports lamp status is LampStatus.) Tj
+1 0 0 1 72 634 Tm () Tj
+1 0 0 1 72 620 Tm (The interface I_LightCommand carries the internal command LightCommand from the) Tj
+1 0 0 1 72 606 Tm (Light Control application component to the Lamp Driver Interface component. The) Tj
+1 0 0 1 72 592 Tm (Lamp Driver Interface converts LightCommand into a hardware-oriented lamp drive) Tj
+1 0 0 1 72 578 Tm (request.) Tj
+ET
+endstream
+endobj
+11 0 obj
+<< /Length 1641 >>
+stream
+BT
+/F1 10 Tf
+14 TL
+1 0 0 1 72 760 Tm (Page 3. Dependencies and Functional Flow) Tj
+1 0 0 1 72 746 Tm (The Light Control application component depends on HeadlampSwitchRequest being) Tj
+1 0 0 1 72 732 Tm (available from the Vehicle Signal Interface component. It also depends on the) Tj
+1 0 0 1 72 718 Tm (Lamp Driver Interface accepting the LightCommand signal.) Tj
+1 0 0 1 72 704 Tm () Tj
+1 0 0 1 72 690 Tm (Functional flow:) Tj
+1 0 0 1 72 676 Tm (1. Vehicle Signal Interface reads HeadlampSwitchRequest from a fictional) Tj
+1 0 0 1 72 662 Tm (vehicle network source.) Tj
+1 0 0 1 72 648 Tm (2. Light Control evaluates HeadlampSwitchRequest. If the request is ON and no) Tj
+1 0 0 1 72 634 Tm (fault condition is present, Light Control sets LightCommand to LOW_BEAM_ON.) Tj
+1 0 0 1 72 620 Tm (3. Lamp Driver Interface receives LightCommand and issues a lamp drive request.) Tj
+1 0 0 1 72 606 Tm (4. Light Control publishes LampStatus so a display or diagnostic function can) Tj
+1 0 0 1 72 592 Tm (show the current lamp state.) Tj
+1 0 0 1 72 578 Tm () Tj
+1 0 0 1 72 564 Tm (Architecture decision:) Tj
+1 0 0 1 72 550 Tm (The signal adaptation responsibility is kept in Vehicle Signal Interface so the) Tj
+1 0 0 1 72 536 Tm (Light Control component does not depend directly on network frame details.) Tj
+1 0 0 1 72 522 Tm () Tj
+1 0 0 1 72 508 Tm (Safety note:) Tj
+1 0 0 1 72 494 Tm (This sample is for academic demonstration only. Real vehicle lighting behavior,) Tj
+1 0 0 1 72 480 Tm (safety analysis, fault handling, and production changes require qualified human) Tj
+1 0 0 1 72 466 Tm (review and project-specific engineering evidence.) Tj
+ET
+endstream
+endobj
+xref
+0 12
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000127 00000 n 
+0000000253 00000 n 
+0000000323 00000 n 
+0000000450 00000 n 
+0000000499 00000 n 
+0000000626 00000 n 
+0000000675 00000 n 
+0000002079 00000 n 
+0000003263 00000 n 
+trailer
+<< /Size 12 /Root 1 0 R >>
+startxref
+4957
+%%EOF

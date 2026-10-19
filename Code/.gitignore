@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+pytest-cache-files-*/
+.tmp/
+.streamlit/secrets.toml
+.env
+reports/generated/
+data/uploads/
+tmp/
+*.faiss
+*.index

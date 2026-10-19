@@ -1,0 +1,6 @@
+# Optional semantic retrieval and external LLM SDKs.
+# The application works without these packages by using TF-IDF fallback.
+sentence-transformers>=3.0
+faiss-cpu>=1.8; python_version < "3.13"
+openai>=1.40
+
