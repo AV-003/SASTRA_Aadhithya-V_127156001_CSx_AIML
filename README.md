@@ -61,6 +61,6 @@ python -m pytest
 - `Evaluation_Results/`: recorded evaluation results.
 - `Model_Prompts_Config/`: example configuration guidance; do not commit credentials.
 - `Declarations/`: declaration templates and AI tool usage declaration.
-- `Video/`: demo recording directory; the recording is not included in this GitHub repository because it exceeds GitHub's 100 MB per-file limit.
+- `Video/`: demo recording for the project walkthrough.
 
 The sample HLD is synthetic. See [`Code/README.md`](Code/README.md) for additional local run details.
